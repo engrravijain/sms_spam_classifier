@@ -14,6 +14,28 @@ $ export FLASK_DEBUG=1
 $ flask run
 ```
 
+# Deploying to heroku
+
+```
+$ heroku create sms-spam-classifer --buildpack heroku/python
+$ heroku git:remote -a sms-spam-classifer
+$ pip install gunicorn
+$ touch procfile
+$ echo "web: gunicorn app:app --log-file=-" >> procfile
+$ echo "python-3.7.1" >> runtime.txt
+$ heroku local
+$ heroku local web
+$ git add .
+$ git commit -m "commit msg"
+$ git push heroku master
+$ git push origin master
+```
+
+# requirents.txt
+
+```
+$ pip freeze > requirements.txt
+```
 
 ## Dataset
 

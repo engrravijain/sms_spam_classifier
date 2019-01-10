@@ -1,0 +1,21 @@
+[2019-01-11 00:40:29 +0530] [30484] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 00:40:29 +0530] [30484] [INFO] Listening at: http://0.0.0.0:5000 (30484)
+[2019-01-11 00:40:29 +0530] [30484] [INFO] Using worker: sync
+[2019-01-11 00:40:29 +0530] [30487] [INFO] Booting worker with pid: 30487
+[2019-01-11 00:41:05 +0530] [30484] [INFO] Handling signal: int
+[2019-01-11 00:41:05 +0530] [30487] [INFO] Worker exiting (pid: 30487)
+[2019-01-11 00:41:05 +0530] [30484] [INFO] Shutting down: Master
+[2019-01-11 00:41:39 +0530] [30670] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 00:41:39 +0530] [30670] [INFO] Listening at: http://0.0.0.0:5000 (30670)
+[2019-01-11 00:41:39 +0530] [30670] [INFO] Using worker: sync
+[2019-01-11 00:41:39 +0530] [30674] [INFO] Booting worker with pid: 30674
+[2019-01-11 00:43:37 +0530] [30670] [INFO] Handling signal: int
+[2019-01-11 00:43:37 +0530] [30674] [INFO] Worker exiting (pid: 30674)
+[2019-01-11 00:43:37 +0530] [30670] [INFO] Shutting down: Master
+[2019-01-11 00:43:47 +0530] [30972] [INFO] Starting gunicorn 19.9.0
+[2019-01-11 00:43:47 +0530] [30972] [INFO] Listening at: http://0.0.0.0:5000 (30972)
+[2019-01-11 00:43:47 +0530] [30972] [INFO] Using worker: sync
+[2019-01-11 00:43:47 +0530] [30975] [INFO] Booting worker with pid: 30975
+[2019-01-11 00:43:57 +0530] [30972] [INFO] Handling signal: int
+[2019-01-11 00:43:57 +0530] [30975] [INFO] Worker exiting (pid: 30975)
+[2019-01-11 00:43:57 +0530] [30972] [INFO] Shutting down: Master
