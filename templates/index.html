@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SMS Spam Classifier</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body 
@@ -21,9 +20,9 @@
             text-align: center; 
             background: #f3f3f3;
             " >
-
-    <h1>SMS<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-        <br>Spam Classifier</h1>
+    
+    <h1>SMS Spam Classifier</h1>
+    <br>
 
     <form action="{{ url_for('predict')}}" method="POST">
 
@@ -36,12 +35,43 @@
     </form>
 
     {% if prediction == 0%}
-        <h2 style="color:red;">Spam</h2>
-	{% elif prediction == 1%}
-		<h2 style="color:green;">Ham</h2>
-	{% elif prediction == 2%}
-		<h2 style="color:#3b3595;">No SMS provided :(</h2>
-	{% endif %}
+        <br>
+        <h3 style="color:red;">Spam</h3>
+    {% elif prediction == 1%}
+        <br>
+		<h3 style="color:green;">Ham</h3>
+    {% elif prediction == 2%}
+        <br>
+		<h3 style="color:#3b3595;">No SMS provided :(</h3>
+    {% endif %}
+    <br>
+    <table class="table table-bordered" style="width: 80%; text-align: justify; text-align: center; vertical-align: middle">
+        <thead>
+            <tr>
+                <th scope="col" style="width:15%">Examples</th>
+                <th scope="col">SMS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">SPAM</th>
+                <td>URGENT! You have won a 1 week FREE membership in our $100,000 Prize Jackpot! Txt the word: CLAIM to No: 81010 T&C www.dbuk.net LCCLTD POBOX 4403LDNW1A7RW18</td>
+            </tr>
+            <tr>
+                <th scope="row">HAM</th>
+                <td>Pls go ahead with watts. I just wanted to be sure. Do have a great weekend. Abiola</td>
+            </tr>
+            <tr>
+                <th scope="row">SPAM</th>
+                <td>Thanks for your subscription to Ringtone UK your mobile will be charged $5/month Please confirm by replying YES or NO. If you reply NO you will not be charged</td>
+            </tr>
+            <tr>
+                <th scope="row">HAM</th>
+                <td>U don't know how stubborn I am. I didn't even want to go to the hospital. I kept telling Mark I'm not a weak sucker. Hospitals are for weak suckers.</td>
+            </tr>
+          
+        </tbody>
+    </table>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
