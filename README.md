@@ -2,19 +2,35 @@
 
 A SMS spam classifier
 
-# Execution
+## Virtualenv
 
 ```
-$ cd sms_spam_classifier
 $ virtualenv venv
 $ source ev/bin/activate
 $ pip install -r requirements.txt
+```
+
+## Anaconda Enviroment
+
+```
+$ conda create --name sms-spam-classifier python=3.7
+$ conda activate sms-spam-classifier
+$ pip install -r requirements.txt
+```
+or
+```
+$ conda env export > sms-spam-classifer.yml
+$ conda env create -f sms-spam-classifer.yml
+```
+## Run
+
+```
 $ export FLASK_APP=app.py
 $ export FLASK_DEBUG=1
 $ flask run
 ```
 
-# Deploying to heroku
+## Deploying to heroku
 
 ```
 $ heroku create sms-spam-classifer --buildpack heroku/python
@@ -31,10 +47,14 @@ $ git push heroku master
 $ git push origin master
 ```
 
-# requirents.txt
+## requirents.txt
 
 ```
 $ pip freeze > requirements.txt
+```
+or 
+```
+$ conda list -e > requirements.txt
 ```
 
 ## Dataset
