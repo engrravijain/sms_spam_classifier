@@ -19,8 +19,8 @@ $ pip install -r requirements.txt
 ```
 or
 ```
-$ conda env export > sms-spam-classifer.yml
-$ conda env create -f sms-spam-classifer.yml
+$ conda env export > sms-spam-classifier.yml
+$ conda env create -f sms-spam-classifier.yml
 ```
 ## Run
 
